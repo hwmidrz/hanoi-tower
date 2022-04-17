@@ -1,0 +1,9 @@
+def hanoi(n,src,dest,mid):
+    if n==1:
+        print("move diske",src,"to",dest)
+        return
+    hanoi(n-1,src,mid,dest)
+    print("move diske",n,"to",src,"to",dest)
+    hanoi(n-1,mid,dest,src)
+n=int(input("whitre number diske :"))
+hanoi(n,'a','c','b')
